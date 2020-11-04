@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cc.jml1024.spring.boot.autoconfigure.KaptchaAutoConfiguration
