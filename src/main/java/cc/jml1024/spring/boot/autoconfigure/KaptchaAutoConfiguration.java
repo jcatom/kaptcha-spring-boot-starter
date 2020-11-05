@@ -1,12 +1,12 @@
 package cc.jml1024.spring.boot.autoconfigure;
 
-import com.google.code.kaptcha.Constants;
-import com.google.code.kaptcha.Producer;
-import com.google.code.kaptcha.util.Config;
+
+import cc.jml1024.kaptcha.Constants;
+import cc.jml1024.kaptcha.Producer;
+import cc.jml1024.kaptcha.util.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -40,6 +40,8 @@ public class KaptchaAutoConfiguration implements InitializingBean {
 
     private Config getCofig() {
         Properties properties = new Properties();
+        logger.info("kaptchaProperties:[{}]", kaptchaProperties);
+
         properties.put(Constants.KAPTCHA_SESSION_CONFIG_KEY, kaptchaProperties.getSessionKey());
         properties.put(Constants.KAPTCHA_SESSION_CONFIG_DATE, kaptchaProperties.getSessionDate());
         properties.put(Constants.KAPTCHA_BORDER, kaptchaProperties.getBorder());

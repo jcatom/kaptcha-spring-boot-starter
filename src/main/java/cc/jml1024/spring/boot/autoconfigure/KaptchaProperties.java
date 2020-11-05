@@ -1,55 +1,56 @@
 package cc.jml1024.spring.boot.autoconfigure;
 
+import cc.jml1024.kaptcha.impl.WaterRipple;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "kaptcha")
 public class KaptchaProperties {
 
-    private String sessionKey;
+    private String sessionKey = "KAPTCHA_SESSION_KEY";
 
-    private String sessionDate;
+    private String sessionDate = "KAPTCHA_SESSION_DATE";
     /**
      * value must be yes or no
      */
-    private String border;
+    private String border = "yes";
 
-    private String borderColor;
+    private String borderColor = "black";
 
-    private String borderThickness;
+    private String borderThickness = "1";
 
-    private String noiseColor;
+    private String noiseColor = "black";
 
-    private String noiseImpl;
+    private String noiseImpl = "cc.jml1024.kaptcha.impl.DefaultNoise";
 
-    private String obscurificatorImpl;
+    private String obscurificatorImpl = "cc.jml1024.kaptcha.impl.WaterRipple";
 
-    private String producerImpl;
+    private String producerImpl = "cc.jml1024.kaptcha.impl.DefaultKaptcha";
 
-    private String textproducerImpl;
+    private String textproducerImpl = "cc.jml1024.kaptcha.text.impl.DefaultTextCreator";
 
-    private String textproducerCharString;
+    private String textproducerCharString = "abcde2345678gfynmnpwx";
 
-    private String textproducerCharLength;
+    private String textproducerCharLength = "5";
 
-    private String textproducerFontNames;
+    private String textproducerFontNames = "Arial,Courier";
 
-    private String textproducerFontColor;
+    private String textproducerFontColor = "black";
 
-    private String textproducerFontSize;
+    private String textproducerFontSize = "40";
 
-    private String textproducerCharSpace;
+    private String textproducerCharSpace = "2";
 
-    private String wordImpl;
+    private String wordImpl = "cc.jml1024.kaptcha.text.impl.DefaultWordRenderer";
 
-    private String backgroundImpl;
+    private String backgroundImpl = "cc.jml1024.kaptcha.impl.DefaultBackground";
 
-    private String backgroundClearFrom;
+    private String backgroundClearFrom = "lightGray";
 
-    private String backgroundClearTo;
+    private String backgroundClearTo = "white";
 
-    private String imageWidth;
+    private String imageWidth = "200";
 
-    private String imageHeight;
+    private String imageHeight = "50";
 
 
     public String getSessionKey() {
@@ -228,4 +229,31 @@ public class KaptchaProperties {
         this.imageHeight = imageHeight;
     }
 
+    @Override
+    public String toString() {
+        return "KaptchaProperties{" +
+                "sessionKey='" + sessionKey + '\'' +
+                ", sessionDate='" + sessionDate + '\'' +
+                ", border='" + border + '\'' +
+                ", borderColor='" + borderColor + '\'' +
+                ", borderThickness='" + borderThickness + '\'' +
+                ", noiseColor='" + noiseColor + '\'' +
+                ", noiseImpl='" + noiseImpl + '\'' +
+                ", obscurificatorImpl='" + obscurificatorImpl + '\'' +
+                ", producerImpl='" + producerImpl + '\'' +
+                ", textproducerImpl='" + textproducerImpl + '\'' +
+                ", textproducerCharString='" + textproducerCharString + '\'' +
+                ", textproducerCharLength='" + textproducerCharLength + '\'' +
+                ", textproducerFontNames='" + textproducerFontNames + '\'' +
+                ", textproducerFontColor='" + textproducerFontColor + '\'' +
+                ", textproducerFontSize='" + textproducerFontSize + '\'' +
+                ", textproducerCharSpace='" + textproducerCharSpace + '\'' +
+                ", wordImpl='" + wordImpl + '\'' +
+                ", backgroundImpl='" + backgroundImpl + '\'' +
+                ", backgroundClearFrom='" + backgroundClearFrom + '\'' +
+                ", backgroundClearTo='" + backgroundClearTo + '\'' +
+                ", imageWidth='" + imageWidth + '\'' +
+                ", imageHeight='" + imageHeight + '\'' +
+                '}';
+    }
 }
