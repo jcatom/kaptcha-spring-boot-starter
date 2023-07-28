@@ -8,6 +8,7 @@ import cc.jml1024.spring.boot.autoconfigure.util.ConfigUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
@@ -18,6 +19,7 @@ import org.springframework.context.annotation.DependsOn;
 import java.util.Properties;
 
 @Configuration
+@ConditionalOnClass({Producer.class, DefaultKaptcha.class})
 @EnableConfigurationProperties({KaptchaProperties.class})
 public class KaptchaAutoConfiguration{
     private Logger logger = LoggerFactory.getLogger(this.getClass());

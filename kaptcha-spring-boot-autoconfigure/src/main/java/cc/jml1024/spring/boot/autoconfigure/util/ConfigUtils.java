@@ -3,10 +3,14 @@ package cc.jml1024.spring.boot.autoconfigure.util;
 import cc.jml1024.kaptcha.Constants;
 import cc.jml1024.spring.boot.autoconfigure.BaseProperties;
 import cc.jml1024.spring.boot.autoconfigure.SingleKaptchaProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
 public class ConfigUtils {
+
+    private static Logger logger = LoggerFactory.getLogger(ConfigUtils.class);
 
     public static Properties kaptchaPropertiesToProperties(BaseProperties kaptchaProperties) {
         Properties properties = new Properties();
@@ -39,7 +43,6 @@ public class ConfigUtils {
 
         properties.setProperty(Constants.KAPTCHA_IMAGE_WIDTH, nullToString(kaptchaProperties.getImage().getWidth()));
         properties.setProperty(Constants.KAPTCHA_IMAGE_HEIGHT, nullToString(kaptchaProperties.getImage().getHeight()));
-
         return properties;
     }
 
