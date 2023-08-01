@@ -1,0 +1,213 @@
+{
+  "groups": [
+    {
+      "name": "spring.kaptcha",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties"
+    },
+    {
+      "name": "spring.kaptcha.border",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Border",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getBorder()"
+    },
+    {
+      "name": "spring.kaptcha.noise",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Noise",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getNoise()"
+    },
+    {
+      "name": "spring.kaptcha.obscurificator",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Obscurificator",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getObscurificator()"
+    },
+    {
+      "name": "spring.kaptcha.producer",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Producer",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getProducer()"
+    },
+    {
+      "name": "spring.kaptcha.textProducer",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getTextProducer()"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.character",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Char",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer",
+      "sourceMethod": "getCharacter()"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.font",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Font",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer",
+      "sourceMethod": "getFont()"
+    },
+    {
+      "name": "spring.kaptcha.word",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Word",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getWord()"
+    },
+    {
+      "name": "spring.kaptcha.background",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Background",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getBackground()"
+    },
+    {
+      "name": "spring.kaptcha.image",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Image",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getImage()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.kaptcha.border.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to set the border.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Border",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.kaptcha.border.color",
+      "type": "java.lang.String",
+      "description": "The border color, eg 0,0,0.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Border",
+      "defaultValue": "0,0,0"
+    },
+    {
+      "name": "spring.kaptcha.border.thickness",
+      "type": "java.lang.Integer",
+      "description": "The border thickness.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Border",
+      "defaultValue": 1
+    },
+    {
+      "name": "spring.kaptcha.noise.color",
+      "type": "java.lang.String",
+      "description": "The noise color, eg 0,0,0.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Noise",
+      "defaultValue": "0,0,0"
+    },
+    {
+      "name": "spring.kaptcha.noise.impl",
+      "type": "java.lang.String",
+      "description": "The noise implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Noise",
+      "defaultValue": "cc.jml1024.kaptcha.impl.DefaultNoise"
+    },
+    {
+      "name": "spring.kaptcha.obscurificator.impl",
+      "type": "java.lang.String",
+      "description": "The Obscurificator implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Obscurificator",
+      "defaultValue": "cc.jml1024.kaptcha.impl.WaterRipple"
+    },
+    {
+      "name": "spring.kaptcha.producer.impl",
+      "type": "java.lang.String",
+      "description": "The Producer implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Producer",
+      "defaultValue": "cc.jml1024.kaptcha.impl.DefaultKaptcha"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.impl",
+      "type": "java.lang.String",
+      "description": "The TextProducer implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer",
+      "defaultValue": "cc.jml1024.kaptcha.text.impl.DefaultTextCreator"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.character.string",
+      "type": "java.lang.String",
+      "description": "",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Char",
+      "defaultValue": "abcde2345678gfynmnpwx"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.character.length",
+      "type": "java.lang.Integer",
+      "description": "",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Char",
+      "defaultValue": 5
+    },
+    {
+      "name": "spring.kaptcha.textProducer.character.space",
+      "type": "java.lang.Integer",
+      "description": "",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Char",
+      "defaultValue": 2
+    },
+    {
+      "name": "spring.kaptcha.textProducer.font.names",
+      "type": "java.lang.String[]",
+      "description": "The text font name set, eg \"Arial,Courier\".",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Font",
+      "defaultValue": ["Arial", "Courier"]
+    },
+    {
+      "name": "spring.kaptcha.textProducer.font.color",
+      "type": "java.lang.String",
+      "description": "The text font color, eg 0,0,0.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Font",
+      "defaultValue": "0,0,0"
+    },
+    {
+      "name": "spring.kaptcha.textProducer.font.size",
+      "type": "java.lang.Integer",
+      "description": "",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$TextProducer$Font",
+      "defaultValue": 40
+    },
+    {
+      "name": "spring.kaptcha.word.impl",
+      "type": "java.lang.String",
+      "description": "The Word renderer implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Word",
+      "defaultValue": "cc.jml1024.kaptcha.text.impl.DefaultWordRenderer"
+    },
+    {
+      "name": "spring.kaptcha.background.impl",
+      "type": "java.lang.String",
+      "description": "The Background implementation class.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Background",
+      "defaultValue": "cc.jml1024.kaptcha.impl.DefaultBackground"
+    },
+    {
+      "name": "spring.kaptcha.background.clear-from",
+      "type": "java.lang.String",
+      "description": "The background \"clear from\" color, eg 192,192,192.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Background",
+      "defaultValue": "192,192,192"
+    },
+    {
+      "name": "spring.kaptcha.background.clear-to",
+      "type": "java.lang.String",
+      "description": "The background \"clear to\" color, eg 255,255,255.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Background",
+      "defaultValue": "255,255,255"
+    },
+    {
+      "name": "spring.kaptcha.background.width",
+      "type": "java.lang.Integer",
+      "description": "The image width.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Image",
+      "defaultValue": 200
+    },
+    {
+      "name": "spring.kaptcha.background.height",
+      "type": "java.lang.Integer",
+      "description": "The image height.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Image",
+      "defaultValue": 50
+    }
+  ],
+  "hints": [
+  ]
+}
