@@ -64,6 +64,12 @@
       "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Image",
       "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
       "sourceMethod": "getImage()"
+    },
+    {
+      "name": "spring.kaptcha.session",
+      "type": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Session",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties",
+      "sourceMethod": "getSession()"
     }
   ],
   "properties": [
@@ -206,6 +212,20 @@
       "description": "The image height.",
       "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Image",
       "defaultValue": 50
+    },
+    {
+      "name": "spring.kaptcha.session.key",
+      "type": "java.lang.String",
+      "description": "The captcha session key.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Session",
+      "defaultValue": "KAPTCHA_SESSION_KEY"
+    },
+    {
+      "name": "spring.kaptcha.session.date",
+      "type": "java.lang.String",
+      "description": "The captcha session date.",
+      "sourceType": "cc.jml1024.spring.boot.autoconfigure.KaptchaProperties$Session",
+      "defaultValue": "KAPTCHA_SESSION_DATE"
     }
   ],
   "hints": [

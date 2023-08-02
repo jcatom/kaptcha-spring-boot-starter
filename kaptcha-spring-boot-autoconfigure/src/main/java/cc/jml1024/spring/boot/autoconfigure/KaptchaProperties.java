@@ -1,5 +1,6 @@
 package cc.jml1024.spring.boot.autoconfigure;
 
+import cc.jml1024.kaptcha.Constants;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.Arrays;
@@ -16,6 +17,8 @@ public class KaptchaProperties {
     private Word word = new Word();
     private Background background = new Background();
     private Image image = new Image();
+
+    private Session session = new Session();
 
     public static class Border {
         private Boolean enabled = true;
@@ -326,6 +329,35 @@ public class KaptchaProperties {
         }
     }
 
+    public static class Session {
+        private String key = "KAPTCHA_SESSION_KEY";
+        private String date = "KAPTCHA_SESSION_DATE";
+
+        public String getKey() {
+            return key;
+        }
+
+        public void setKey(String key) {
+            this.key = key;
+        }
+
+        public String getDate() {
+            return date;
+        }
+
+        public void setDate(String date) {
+            this.date = date;
+        }
+
+        @Override
+        public String toString() {
+            return new StringJoiner(", ", Session.class.getSimpleName() + "[", "]")
+                    .add("key='" + key + "'")
+                    .add("date='" + date + "'")
+                    .toString();
+        }
+    }
+
     public Border getBorder() {
         return border;
     }
@@ -389,7 +421,15 @@ public class KaptchaProperties {
     public void setImage(Image image) {
         this.image = image;
     }
-    
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
     public Properties toProperties() {
         Properties properties = new Properties();
         Boolean border = this.getBorder().getEnabled();
@@ -420,6 +460,9 @@ public class KaptchaProperties {
 
         properties.setProperty(cc.jml1024.kaptcha.Constants.KAPTCHA_IMAGE_WIDTH, String.valueOf(this.getImage().getWidth()));
         properties.setProperty(cc.jml1024.kaptcha.Constants.KAPTCHA_IMAGE_HEIGHT, String.valueOf(this.getImage().getHeight()));
+
+        properties.setProperty(Constants.KAPTCHA_SESSION_CONFIG_KEY, String.valueOf(this.getSession().getKey()));
+        properties.setProperty(Constants.KAPTCHA_SESSION_CONFIG_DATE, String.valueOf(this.getSession().getDate()));
         return properties;
     }
 
@@ -434,6 +477,7 @@ public class KaptchaProperties {
                 .add("word=" + word)
                 .add("background=" + background)
                 .add("image=" + image)
+                .add("session=" + session)
                 .toString();
     }
 }
